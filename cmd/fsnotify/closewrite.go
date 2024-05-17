@@ -3,7 +3,7 @@ package main
 /*
 func closeWrite(paths ...string) {
 	if len(paths) < 1 {
-		exit("must specify at least one path to watch")
+		exit("must specify at least one path to Watch")
 	}
 
 	w, err := fsnotify.NewWatcher()

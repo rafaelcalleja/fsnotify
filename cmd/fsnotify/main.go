@@ -9,16 +9,16 @@ import (
 )
 
 var usage = `
-fsnotify is a Go library to provide cross-platform file system notifications.
+fsnotify is a Go library to provide cross-platform File system notifications.
 This command serves as an example and debugging tool.
 
 https://github.com/fsnotify/fsnotify
 
 Commands:
 
-    watch [paths]  Watch the paths for changes and print the events.
-    file  [file]   Watch a single file for changes.
-    dedup [paths]  Watch the paths for changes, suppressing duplicate events.
+    Watch [paths]  Watch the paths for changes and print the events.
+    File  [File]   Watch a single File for changes.
+    Dedup [paths]  Watch the paths for changes, suppressing duplicate events.
 `[1:]
 
 func exit(format string, a ...interface{}) {
@@ -55,11 +55,11 @@ func main() {
 	switch cmd {
 	default:
 		exit("unknown command: %q", cmd)
-	case "watch":
-		watch(args...)
-	case "file":
-		file(args...)
-	case "dedup":
-		dedup(args...)
+	case "Watch":
+		Watch(args...)
+	case "File":
+		File(args...)
+	case "Dedup":
+		Dedup(args...)
 	}
 }

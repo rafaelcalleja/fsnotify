@@ -14,9 +14,9 @@ import (
 //
 // The general strategy to deal with this is to wait a short time for more write
 // events, resetting the wait period for every new event.
-func dedup(paths ...string) {
+func Dedup(paths ...string) {
 	if len(paths) < 1 {
-		exit("must specify at least one path to watch")
+		exit("must specify at least one path to Watch")
 	}
 
 	// Create a new watcher.
@@ -75,7 +75,7 @@ func dedupLoop(w *fsnotify.Watcher) {
 				return
 			}
 
-			// We just want to watch for file creation, so ignore everything
+			// We just want to Watch for File creation, so ignore everything
 			// outside of Create and Write.
 			if !e.Has(fsnotify.Create) && !e.Has(fsnotify.Write) {
 				continue

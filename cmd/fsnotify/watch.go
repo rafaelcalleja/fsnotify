@@ -4,9 +4,9 @@ import "github.com/fsnotify/fsnotify"
 
 // This is the most basic example: it prints events to the terminal as we
 // receive them.
-func watch(paths ...string) {
+func Watch(paths ...string) {
 	if len(paths) < 1 {
-		exit("must specify at least one path to watch")
+		exit("must specify at least one path to Watch")
 	}
 
 	// Create a new watcher.
